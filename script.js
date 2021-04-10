@@ -23,7 +23,7 @@ magic8Ball.listOfAnswers = [
 	"outlook not so good",
 	"very doubtful"
 ];
-// answer stays hidden until question is asked 
+// answer stays hidden until question is asked
 $("#answer").hide();
 
 // define the method
@@ -66,7 +66,5 @@ setTimeout(
 };
 
 $("#questionButton").click(onClick);
-
-/* magic8Ball.askQuestion("Is the sky blue?"); */
 
 });
