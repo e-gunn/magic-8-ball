@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-var magic8Ball = {};
+const magic8Ball = {};
 magic8Ball.listOfAnswers = [
 	"it is certain",
 	"it is decidedly so",
@@ -35,13 +35,13 @@ magic8Ball.askQuestion = function(question) {
 	// make answer fade in over 4 seconds
 	$("#answer").fadeIn(4000);
 	// create a random number
-	var randomNumber = Math.random();
+	const randomNumber = Math.random();
 	// make the random number between 0 and the number of items in your array
-	var randomNumberArray = randomNumber * this.listOfAnswers.length;
+	const randomNumberArray = randomNumber * this.listOfAnswers.length;
 	// round down the number to be a whole number
-	var randomIndex = Math.floor(randomNumberArray);
+	const randomIndex = Math.floor(randomNumberArray);
 	// use that number to index a random number from the answers array
-	var answer = this.listOfAnswers[randomIndex];
+	const answer = this.listOfAnswers[randomIndex];
 	// display the randomly chosen answer
 	$("#answer").text(answer);
 
@@ -49,7 +49,7 @@ magic8Ball.askQuestion = function(question) {
 	console.log(answer);
 };
 
-var onClick = function() {
+const onClick = function() {
 // hide the answer
 $("#answer").hide();
 // change back to 8-ball image
@@ -59,7 +59,7 @@ $("#8ball").attr("src", "https://s3.amazonaws.com/media.skillcrush.com/skillcrus
 setTimeout(
     function() {
       	// show prompt to ask question
-				var question = prompt("ASK A YES/NO QUESTION!");
+				const question = prompt("ASK A YES/NO QUESTION!");
 				magic8Ball.askQuestion(question);
     }, 500);
 
